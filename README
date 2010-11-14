@@ -1,0 +1,19 @@
+Yii extension for Amazon AWS Service.
+This extension intend to give you a very simple interface to work with Amazon service in Yii Framework.
+
+This extension require AWSSDKforPHP PEAR package to work. More information on that PEAR pacakge @ http://pear.amazonwebservices.com/
+
+Tested on Yii version 1.1.1
+
+To use this extension configure it as a application component in Yii.
+
+key and secret must be configure correctly before you start using this component.
+
+Sub Component
+-------------
+AmazonS3Component - Component to manage S3 service.
+  Configuration Options as s3config:
+    - defaultBucket* The default bucket to operate all the method on.
+    - defaultACL Default ACL to set when creating object, default as Public.
+    - randomPath Set to true to generate a random path and prepend it to the object name, default as true.
+    - pathPrefix Default prefix path for all newly created object.
