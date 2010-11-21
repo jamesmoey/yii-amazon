@@ -48,7 +48,7 @@ class AmazonS3Component extends CComponent {
       return urldecode($this->s3->get_object_url($bucket, $filePath));
     } else {
       Yii::log("STATUS:".$result->status."\nHEDAER:".$result->header."\nBODY:".$result->body, CLogger::LEVEL_ERROR, "application");
-      throw new CEXception($result->status);
+      throw new CException($result->status);
     }
   }
 }
