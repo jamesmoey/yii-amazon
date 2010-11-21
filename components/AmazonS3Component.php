@@ -21,7 +21,7 @@ class AmazonS3Component extends CComponent {
     if (!isset($this->config['randomPath'])) $this->config['randomPath'] = true;
     if (!isset($this->config['pathPrefix'])) $this->config['pathPrefix'] = '';
     else if (strripos($this->config['pathPrefix'], '/') !== strlen($this->config['pathPrefix'])-1) $this->config['pathPrefix'] .= '/';
-    if ($this->config['pathPrefix'][0] == '/') $this->config['pathPrefix'] = substr($this->config['pathPrefix'], 1);
+    if (strpos($this->config['pathPrefix'], '/') === 0) $this->config['pathPrefix'] = substr($this->config['pathPrefix'], 1);
   }
 
   /**
